@@ -35,7 +35,7 @@ var Select =
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -84,16 +84,10 @@ var Select =
 	        //init
 	        this.hideDefaultHtml();
 	        this.createNewHtml();
-
-	        console.log(_template2.default);
+	        this.setEvents();
 	    }
 
 	    _createClass(Default, [{
-	        key: 'info',
-	        value: function info() {
-	            return this._type;
-	        }
-	    }, {
 	        key: 'hideDefaultHtml',
 	        value: function hideDefaultHtml() {
 	            this._selectElement.style.display = 'none';
@@ -102,6 +96,19 @@ var Select =
 	        key: 'createNewHtml',
 	        value: function createNewHtml() {
 	            this._parentElement.innerHTML = _template2.default;
+	        }
+	    }, {
+	        key: 'setEvents',
+	        value: function setEvents() {
+	            var that = this;
+
+	            that._parentElement.querySelector('.select__field').onfocus = function () {
+	                that._parentElement.querySelector('.select__items').style.display = 'block';
+	            };
+
+	            that._parentElement.querySelector('.select__field').onblur = function () {
+	                that._parentElement.querySelector('.select__items').style.display = 'none';
+	            };
 	        }
 	    }]);
 
@@ -163,7 +170,7 @@ var Select =
 
 
 	// module
-	exports.push([module.id, ".select__input {\n  display: block;\n}\n.select__items {\n  display: block;\n}\n.select__item {\n  display: block;\n}\n", ""]);
+	exports.push([module.id, ".select__input {\n  display: block;\n}\n.select__items {\n  display: none;\n}\n.select__item {\n  display: block;\n  color: #008000;\n}\n", ""]);
 
 	// exports
 
