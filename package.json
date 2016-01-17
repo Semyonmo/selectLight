@@ -1,0 +1,36 @@
+{
+  "name": "select-light",
+  "version": "0.0.1",
+  "description": "light select component",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "css-loader": "^0.23.1",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.4.3",
+    "webpack": "^1.12.11"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Semyonmo/selectLight.git"
+  },
+  "keywords": [
+    "select",
+    "dropdown",
+    "selectbox",
+    "selector"
+  ],
+  "author": "Semyon Morozov jsemyonom@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Semyonmo/selectLight/issues"
+  },
+  "homepage": "https://github.com/Semyonmo/selectLight#readme"
+}
